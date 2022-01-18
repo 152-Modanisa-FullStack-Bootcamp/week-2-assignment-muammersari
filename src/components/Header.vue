@@ -1,6 +1,6 @@
 <template>
   <div class="header-container">
-    <input id="search-input" type="text" placeholder="Saeach" />
+    <span @click="home" class="favoritescount">Home</span>
     <span @click="navigateToFavoritePage" class="favoritescount">
       {{ this.$store.state.favoritesList.length }}
       Favorites</span
@@ -12,6 +12,9 @@
 export default {
   name: "Header",
   methods: {
+    home() {
+      this.$router.push("/");
+    },
     navigateToFavoritePage() {
       this.$router.push("/favorites/bootcamp");
     },
@@ -40,12 +43,12 @@ export default {
 #search-input:hover {
   border-bottom: 1.2px solid gray;
 }
-.favoritescount{
+.favoritescount {
   color: rgba(17, 106, 148, 0.876);
   font-size: 16px;
   font-weight: 700;
 }
-.favoritescount:hover{
+.favoritescount:hover {
   font-size: 17px;
   color: rgb(100, 26, 129);
 }

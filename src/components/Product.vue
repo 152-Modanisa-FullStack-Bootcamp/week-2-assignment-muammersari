@@ -1,6 +1,6 @@
 <template>
-  <div class="products-container" @click="navigateToWatchPage">
-    <div class="images">
+  <div class="products-container">
+    <div class="images" @click="navigateToWatchPage">
       <img class="image" :src="product.coverImage" :alt="product.description" />
       <img
         class="image1"
